@@ -13,7 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4.x.x # use the explicit version number
         with:
-          working-directory: cypressautomation
+          working-directory: cypress/e2e
           install-command: npm install
           build: npm run build
           start: npm start
