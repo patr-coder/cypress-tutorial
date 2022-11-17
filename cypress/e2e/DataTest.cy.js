@@ -14,7 +14,9 @@ describe('MyTestSuite', function(){
                 // Verification credentials
                 if(DataUser.username === 'Admin' && DataUser.password === 'admin123'){
                     // successfully message
-                    cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').should('have.text',DataUser.expected);
+                    // cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').should('have.text',DataUser.expected);
+                    cy.get('.oxd-topbar-header-title').should("have.text",DataUser.expected);
+
                     
                     cy.get('.oxd-userdropdown-tab > .oxd-icon').click();
                     cy.get(':nth-child(4) > .oxd-userdropdown-link').click();

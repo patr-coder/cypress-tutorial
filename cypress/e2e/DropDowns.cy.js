@@ -1,4 +1,4 @@
-ndescribe('handle dropdowns', function(){
+describe('handle dropdowns', function(){
 
     it('Dropdown with select', function(){
 
@@ -7,7 +7,7 @@ ndescribe('handle dropdowns', function(){
         .select('Canada')
         .should('have.value','Canada')
     })
-    it('Dropdown with select', function(){
+    it.only('Dropdown with select', function(){
 
         cy.visit('https://www.dummyticket.com/dummy-ticket-for-visa-application/')
         cy.get('#select2-billing_country-container').click()
