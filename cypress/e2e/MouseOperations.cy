@@ -21,13 +21,13 @@ describe('Mouse Operation', function(){
         cy.get('.context-menu-icon-copy > span').should('be.visible');
     });
 
-    it.skip('Double Click', ()=>{
+    it('Double Click', ()=>{
         cy.visit("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondbclick3")
-        cy.frameLoaded('#my-frames'); // Load the frames 
+        // cy.frameLoaded('#my-frames'); // Load the frames 
 
         // Approach 1 
-        cy.iframe("#my-frames").find("button[ondblclick='myFunction()]").trigger('dblclick');
-        cy.iframe('#iframe').find('#filed').should('have.value','Hello world');
+        // cy.iframe("#my-frames").find("button[ondblclick='myFunction()]").trigger('dblclick');
+        // cy.iframe('#iframe').find('#filed').should('have.value','Hello world');
 
         // Approach 2 
         // cy.iframe("#my-frames").find("button[ondblclick='myFunction()]").dblclick();

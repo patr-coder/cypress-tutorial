@@ -35,8 +35,8 @@ describe('Customer Commands', function(){
         // cy.get(".ico-account").should("have.text", "My account")
 
          /// Approach 2 
-        cy.visit("http://mason-work.herokuapp.com/user/login");
-        cy.loginApp("patrick@masonwork.co.jp","Masonwork2022");
+        cy.visit("https://demo.opencart.com/");
+        cy.loginApp("patrick@masonwork","Mason");
         cy.wait(1000);
         cy.get('.logo > .d-none').should("have.text","メイスンワｰク株式会社");
         

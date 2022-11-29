@@ -4,23 +4,23 @@ describe("Assertion-demo", function(){
 
     it.skip("Implicit assertions", function(){
 
-        cy.visit("https://masonwork.org/user/login")
+        cy.visit("https://demo.opencart.com/")
 
         //should and
         cy.url().should('include', 'masonwork.org')
-        cy.url().should('eq','https://masonwork.org/user/login')
-        cy.url().should('contain','masonwork.org/user/login')
+        cy.url().should('eq','https://demo.opencart.com/')
+        cy.url().should('contain','')
 
        // second way with one url three should
 
         cy.url().should('include', 'masonwork.org')
-        .should('eq','https://masonwork.org/user/login')
+        .should('eq','https://demo.opencart.com/')
         .should('contain','masonwork.org/user/login')
 
         //third way with url should and two and 
                                 
         cy.url().should('include', 'masonwork.org')
-        .and('eq','https://masonwork.org/user/login')
+        .and('eq','https://demo.opencart.com/')
         .and('contain','masonwork.org/user/login')
         cy.title().should('include','Login')
         .and('contain','Lo')
@@ -39,9 +39,9 @@ describe("Assertion-demo", function(){
 
 it("explicit assertions", function(){
 
-    cy.visit("https://masonwork.org/user/login")
-    cy.get('.input-group > .form-control').type('patrick@masonwork.co.jp')
-    cy.get(':nth-child(3) > .form-control').type('Masonwork2023')
+    cy.visit("https://demo.opencart.com/")
+    cy.get('.input-group > .form-control').type('patrick@masonwork')
+    cy.get(':nth-child(3) > .form-control').type('Mason')
     cy.get('.btn').click()
 
     let expName="管理者 管理者";
