@@ -16,7 +16,7 @@ jobs:
         with:
           # working-directory: cypress/e2e/
           install-command: npm install
-          build: npm run build
+          # build: npm run build
           start: npm start
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
