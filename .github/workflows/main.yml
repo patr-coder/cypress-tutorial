@@ -14,8 +14,8 @@ jobs:
         #uses: cypress-io/github-action@v2 # use the explicit version number
         uses: cypress-io/github-action@v4.2.0 # use the explicit version number
         with:
-          #working-directory: cypress/e2e/
-          #install-command: npm install
+          working-directory: cypress/e2e/
+          install-command: npm install
           build: npm run build
           start: npm start
         env:
