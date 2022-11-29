@@ -31,17 +31,11 @@ describe('Handle', function(){
                  .each(($row , index, $rows)=>{
                      cy.wrap($row).within(()=>{
                          cy.get('td:nth-child(3)').then((e)=>{
-                             
                              cy.log(e.text()); // email
-    
                          })
-    
                      })
-    
-                 })
-    
-             }
-    
+                 })   
+             }  
           }
       })
 
