@@ -20,17 +20,17 @@
 .Download Visual studio Code Editor 
 
 ## Who uses Cypress 
-  #Cypress enables you to write all types of tests: 
+  # Cypress enables you to write all types of tests: 
   .End-to-end tests 
   .Component tests 
   .integration tests
   .Units tests 
-#####Cypress can test anything that run in a browsers. 
+##### Cypress can test anything that run in a browsers. 
 
 ##cypress open 
 Now you can open Cypress from your project root one of the following ways:
 
-#####npx cypress open 
+##### npx cypress open 
   
   or by using yarn 
 #####Yarn run cypress open   
@@ -44,7 +44,7 @@ Now you can open Cypress from your project root one of the following ways:
 }
 Now you can invoke the command from your project root like so:
 
-##npm run cypress:open
+## npm run cypress:open
 ...and Cypress will open right up for you.
 
 
