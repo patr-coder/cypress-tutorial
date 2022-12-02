@@ -3,11 +3,12 @@ describe('MyTestSuite', function(){
     it('DataForeach 3', function(){
         cy.fixture('orangehrm2.json').then((data)=>{
             cy.visit("https://opensource-demo.orangehrmlive.com/")
+            
             data.forEach((DataUser)=>{
                 // Username 
-                cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(DataUser.username);
+                cy.get(":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input").type(DataUser.username);
                 // Password
-                cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(DataUser.password);
+                cy.get(":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input").type(DataUser.password);
                 // Validation Button 
                 cy.get('.oxd-button').click();
 

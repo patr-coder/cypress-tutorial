@@ -75,13 +75,12 @@ it('Js Alerts', function(){
         // cy.on('window:prompt',()=>false); 
         // alert window automatically closed by cypress 
         cy.get('#result').should('have.text','You entered: welcome');
-
  })
 
  //4) Authenticated alert
  it('Authenticated alert',function(){
+    
     // approach 1
-
     cy.visit("https://the-internet.herokuapp.com/basic_auth",{auth:
     {
         username: 'admin', 
@@ -96,8 +95,6 @@ cy.get('p').should('have.contain', 'Congratulations! You must have the proper cr
 
     cy.visit("https://admin:admin@the-internet.herokuapp.com/basic_auth");
  cy.get('p').should('have.contain', 'Congratulations! You must have the proper credentials.')
-
   })
-
 })
   

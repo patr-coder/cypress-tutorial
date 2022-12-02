@@ -1,6 +1,6 @@
 describe('Data Login checking', function () {
 
-    it('DataDrivenTest', function () {
+    it('DataDrivenTest login ', function () {
         cy.fixture("orangehrm2").then((data) => {
             cy.visit("https://opensource-demo.orangehrmlive.com/")
 
@@ -17,7 +17,6 @@ describe('Data Login checking', function () {
                     cy.get(':nth-child(4) > .oxd-userdropdown-link').click(); // logout
                 } else {
                     cy.get('.oxd-alert-content > .oxd-text').should('have.text', userData.expected);
-
                 }
             });
         })
