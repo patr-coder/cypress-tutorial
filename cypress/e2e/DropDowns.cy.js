@@ -23,22 +23,26 @@ describe('handle dropdowns', function(){
         cy.get('#searchInput').type('Delhi')
         cy.get('.suggestion-title').contains('Delhi University').click()
     })
-    it(' Dynamic Dropdown with select', function(){
+    // it(' Dynamic Dropdown with select,first way to get ', function(){
 
-        cy.visit('https://www.google.com/')
-        cy.get("input[name='q']").type('cypress automation')
-        // first way to get 
-        cy.get('div.wM6W7d>span').should('have.length',11)
-        cy.get('div.wM6W7d>span').contains('cypress automation tutorial').click()
+    //     cy.visit('https://www.google.com/')
+    //     cy.get("input[name='q']").type('cypress automation')
+       
+    //     cy.get('div.wM6W7d>span').should('have.length',11)
+    //     cy.get('div.wM6W7d>span').contains('cypress automation tutorial').click()
+    //     cy.get("input[name='q']").should('have.value', 'cypress automation tutorial')   
+    // }) 
+    // it("Dynamic Dropdown with select,second way to get  ",function(){
+    //     cy.visit('https://www.google.com/')
         
-        // second way to get 
-        // cy.get('div.wM6W7d>span').each(($el, index, $list) => {
-             // $el is a wrapped jQuery element
-            //if ($el.text() === 'cypress automation') {
+    //     cy.get('div.wM6W7d>span').each(($el, index, $list) => {
+    //          //$el is a wrapped jQuery element
+    //         if ($el.text() === 'cypress automation') {
 
-              //cy.wrap($el).click()
-             //} 
-            //})
-        cy.get("input[name='q']").should('have.value', 'cypress automation tutorial')   
-    })    
+    //           cy.wrap($el).click()
+    //          } 
+    //         })
+    //         cy.get("input[name='q']").should('have.value', 'cypress automation tutorial')  
+
+    // })   
 })
