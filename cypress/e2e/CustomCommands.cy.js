@@ -21,7 +21,7 @@ describe('Customer Commands', function(){
         cy.clickLink("APPLE MACBOOK PRO 13-inch");
         cy.get('h1').should('have.text', 'Apple MacBook Pro 13-inch');
     })
-    it.only("login command", function(){
+    it("login command", function(){
          
         // Approach 1
         //cy.visit("https://opensource-demo.orangehrmlive.com/"");
