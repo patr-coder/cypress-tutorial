@@ -1,7 +1,7 @@
-describe('First Test ', function(){
-    it('Login', function(){
+describe('First Test ', function () {
+    it('Login', function () {
         cy.visit("https://itera-qa.azurewebsites.net/home/automation");
-        cy.LoginPractice("Peter","090000000","peter@me.co.jp","012345678","Tokyo bldg 2F-B");
+        cy.LoginPractice("Peter", "090000000", "peter@me.co.jp", "012345678", "Tokyo bldg 2F-B");
 
         cy.wait(1000);
         cy.get('#female').should('be.visible')

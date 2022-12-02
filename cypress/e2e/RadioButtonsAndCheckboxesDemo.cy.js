@@ -1,6 +1,6 @@
-describe("check UI Elements", function(){
+describe("check UI Elements", function () {
 
-    it("Check Radio ButTons", function(){
+    it("Check Radio ButTons", function () {
 
         // open web site
         cy.visit("https://itera-qa.azurewebsites.net/home/automation")
@@ -12,7 +12,7 @@ describe("check UI Elements", function(){
         cy.get('#female').should('not.be.checked')
     })
 
-    it("Checking check boxes Radio", function(){
+    it("Checking check boxes Radio", function () {
 
         // open web site
         cy.visit("https://itera-qa.azurewebsites.net/home/automation")
