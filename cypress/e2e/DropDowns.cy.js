@@ -7,7 +7,7 @@ describe('handle dropdowns', function(){
         .select('Canada')
         .should('have.value','Canada')
     })
-    it.only('Dropdown with select', function(){
+    it('Dropdown with select', function(){
 
         cy.visit('https://www.dummyticket.com/dummy-ticket-for-visa-application/')
         cy.get('#select2-billing_country-container').click()
@@ -23,7 +23,7 @@ describe('handle dropdowns', function(){
         cy.get('#searchInput').type('Delhi')
         cy.get('.suggestion-title').contains('Delhi University').click()
     })
-    it.only(' Dynamic Dropdown with select', function(){
+    it(' Dynamic Dropdown with select', function(){
 
         cy.visit('https://www.google.com/')
         cy.get("input[name='q']").type('cypress automation')
@@ -31,20 +31,14 @@ describe('handle dropdowns', function(){
         cy.get('div.wM6W7d>span').should('have.length',11)
         cy.get('div.wM6W7d>span').contains('cypress automation tutorial').click()
         
-
         // second way to get 
-
         // cy.get('div.wM6W7d>span').each(($el, index, $list) => {
-
              // $el is a wrapped jQuery element
-        //     if ($el.text() === 'cypress automation') {
+            //if ($el.text() === 'cypress automation') {
 
-        //       cy.wrap($el).click()
-        //     } 
-        //   })
-        cy.get("input[name='q']").should('have.value', 'cypress automation tutorial')
-        
-    })
-    
-    
+              //cy.wrap($el).click()
+             //} 
+            //})
+        cy.get("input[name='q']").should('have.value', 'cypress automation tutorial')   
+    })    
 })

@@ -21,8 +21,8 @@ describe('File Upload', function(){
         cy.get('#drag-drop-upload').attachFile('xs517544.key',{subjectType:'drag-n-drop'});
         cy.get('#drag-drop-upload > .dz-preview > .dz-details > .dz-filename > span').contains('xs517544.key');
         cy.wait(5000);
-
     })
+})
     // it('Multiple Uploads',function(){
     //     cy.visit("https://masonwork.org/user/login")
     // cy.get('.input-group > .form-control').type('https://demo.opencart.com/')
@@ -51,10 +51,7 @@ describe('File Upload', function(){
     // })
     // it('File-shadow',function(){
     //     cy.visit("https://www.htmlelements.com/demos/")
-        // cy.get('.smart',{includeShadowDom:true}).attachFile('xs517544.key');
-        // cy.wait(5000);
-        // cy.get('.smart',{includeShadowDom:true}).contains('xs517544.key');
-
-
+    //     cy.get('.smart',{includeShadowDom:true}).attachFile('xs517544.key');
+    //     cy.wait(5000);
+    //     cy.get(".smart",{includeShadowDom:true}).contains('xs517544.key');
     // })
-})
