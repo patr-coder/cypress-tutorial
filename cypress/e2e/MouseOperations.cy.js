@@ -32,11 +32,11 @@ describe('Mouse Operation', function(){
         cy.get('#box7').drag('#box107',{force:true});
 
     });
-    it('Scrolling Page', ()=>{
-        cy.visit("https://www.countries-ofthe-world.com/flags-of-the-world.html")
-        cy.get(':nth-child(1) > tbody > :nth-child(42) > :nth-child(2)').scrollIntoView({duration:1000});
-        cy.get(':nth-child(1) > tbody > :nth-child(42) > :nth-child(2)').should('be.visible');
-        cy.get(':nth-child(1) > tbody > :nth-child(6) > :nth-child(2)').scrollIntoView({duration:1000});
-        cy.get(':nth-child(1) > tbody > :nth-child(6) > :nth-child(2)').should('be.visible');
-        cy.get('#footer').scrollIntoView();
-    });
+    // it('Scrolling Page', ()=>{
+    //     cy.visit("https://www.countries-ofthe-world.com/flags-of-the-world.html")
+    //     cy.get(':nth-child(1) > tbody > :nth-child(42) > :nth-child(2)').scrollIntoView({duration:1000});
+    //     cy.get(':nth-child(1) > tbody > :nth-child(42) > :nth-child(2)').should('be.visible');
+    //     cy.get(':nth-child(1) > tbody > :nth-child(6) > :nth-child(2)').scrollIntoView({duration:1000});
+    //     cy.get(':nth-child(1) > tbody > :nth-child(6) > :nth-child(2)').should('be.visible');
+    //     cy.get('#footer').scrollIntoView();
+    // });
