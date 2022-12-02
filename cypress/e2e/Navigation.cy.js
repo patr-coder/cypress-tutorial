@@ -22,10 +22,6 @@ describe('Navigation Browser', function(){
 
         cy.go('back'); // go back  to home page 
         cy.title().should('eq','Your Store'); // Home page title 
-
         cy.reload();
-
-
-
     })
 })

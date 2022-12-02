@@ -11,7 +11,7 @@ describe('handle tab-s', function(){
     }) 
      
     // Approach2
-    it.only('Approach 2', function(){
+    it('Approach 2', function(){
         cy.visit("https://the-internet.herokuapp.com/windows")
         cy.get('.example > a').then((e)=>{
             let url=e.prop('href');
@@ -20,9 +20,6 @@ describe('handle tab-s', function(){
         cy.url().should('include', 'https://the-internet.herokuapp.com/windows/new')
 
         cy.wait(5000);
-        cy.go('back');
-        
-
-    }) 
-   
+        cy.go('back');        
+    })   
 })

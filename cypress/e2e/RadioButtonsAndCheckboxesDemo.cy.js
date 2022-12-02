@@ -37,7 +37,5 @@ describe("check UI Elements", function(){
 
         // selecting last check box 
         cy.get(".form-check-input[type='checkbox']").last().check().should('be.checked')
-
-    
     })
 })
