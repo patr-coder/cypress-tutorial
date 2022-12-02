@@ -23,5 +23,4 @@ describe('handle dropdowns', function () {
         cy.get('#searchInput').type('Delhi')
         cy.get('.suggestion-title').contains('Delhi University').click()
     })
-
 })
