@@ -2,7 +2,6 @@
 // over writing existing contains() command
 // re-usable custom commands
 
-
 describe('Customer Commands', function(){
     it('handling links', function(){
         cy.visit("https://demo.nopcommerce.com/");
@@ -14,8 +13,6 @@ describe('Customer Commands', function(){
         //using custom commands 
       cy.clickLink("Apple MacBook Pro 13-inch");
         cy.get('h1').should('have.text', 'Apple MacBook Pro 13-inch');
-
-
     })
     it("overwriting existing commands", function(){
         cy.visit("https://demo.nopcommerce.com/");
@@ -24,21 +21,21 @@ describe('Customer Commands', function(){
         cy.clickLink("APPLE MACBOOK PRO 13-inch");
         cy.get('h1').should('have.text', 'Apple MacBook Pro 13-inch');
     })
-    it("login command", function(){
+    it.only("login command", function(){
          
         // Approach 1
-        //cy.visit("https://demo.nopcommerce.com/");
+        //cy.visit("https://opensource-demo.orangehrmlive.com/"");
         //login 
         //search
         // cy.clickLink('Log in'); // custom commands
-        //cy.loginApp("patrick@masonwork.co.jp","012345678")
-        // cy.get(".ico-account").should("have.text", "My account")
+        //cy.loginApp("Admin","admin123")
+        // cy.get("h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module").should("have.text", "Dashboard")
 
          /// Approach 2 
-        cy.visit("https://demo.opencart.com/");
-        cy.loginApp("patrick@masonwork","Mason");
+        cy.visit("https://opensource-demo.orangehrmlive.com/");
+        cy.loginApp("Admin","admin123");
         cy.wait(1000);
-        cy.get('.logo > .d-none').should("have.text","メイスンワｰク株式会社");
+        cy.get("h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module").should("have.text","Dashboard");
         
        
 

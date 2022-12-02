@@ -57,7 +57,7 @@ Cypress.Commands.overwrite('contains',(originalFn, subject, filter, text, option
     return originalFn(subject, filter, text, options)
 })
 // Custom commands for login
-Cypress.Commands.add("loginApp", (email,password)=>{
+Cypress.Commands.add("loginApp", (name,password)=>{
 
     // demo site : https://demo.nopcommerce.com/
     // cy.get('#Email').type(email);
@@ -65,9 +65,9 @@ Cypress.Commands.add("loginApp", (email,password)=>{
     // cy.get("form > .buttons > .button-1").click();
 
     // masonwork site : http://mason-work.herokuapp.com/user/login"
-    cy.get('.input-group > .form-control').type(email);
-    cy.get(':nth-child(3) > .form-control').type(password);
-    cy.get('.btn').click();
+    cy.get("input[name='username']").type(name);
+    cy.get("input[type='password']").type(password);
+    cy.get("button[type='submit']").click();
 
 })
 Cypress.Commands.add("LoginPractice", (name,number,email,password,address)=>{
